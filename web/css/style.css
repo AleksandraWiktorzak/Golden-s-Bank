@@ -1,7 +1,7 @@
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain) */
-@import url("https://fonts.googleapis.com/css?family=Poppins&display=swap&subset=latin-ext");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans&display=swap");
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -48,14 +48,41 @@ table {
 a {
   text-decoration: none; }
 
+@keyframes shadow-pulse {
+  0% {
+    box-shadow: 0 0 0 0px rgba(0, 0, 0, 0.2); }
+  100% {
+    box-shadow: 0 0 0 25px rgba(0, 0, 0, 0); } }
+
+.c-about i {
+  border: solid #2e281f;
+  border-width: 0 6px 6px 0;
+  display: inline-block;
+  padding: 3px;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  width: 13px;
+  height: 13px; }
+
+.c-comments .opinion {
+  -webkit-box-shadow: 5px 5px 4px 0px #a6a4a6;
+  -moz-box-shadow: 5px 5px 4px 0px #a6a4a6;
+  box-shadow: 5px 5px 4px 0px #a6a4a6; }
+
+.c-footer {
+  -webkit-box-shadow: 0px -3px 3px 0px #a6a4a6;
+  -moz-box-shadow: 0px -3px 3px 0px #a6a4a6;
+  box-shadow: 0px -3px 3px 0px #a6a4a6; }
+
 html {
   scroll-behavior: smooth; }
 
 .grid-container {
+  line-height: 1.15;
   display: grid;
-  grid-template-rows: 600px 8fr 3fr 5fr 212px;
+  grid-template-rows: 600px 9fr 2fr 5fr 212px;
   height: 2000px;
-  font-family: "Poppins", sans-serif;
+  font-family: "Open Sans", sans-serif;
   box-sizing: border-box;
   font-size: 20px; }
   .grid-container h1 {
@@ -66,38 +93,114 @@ html {
     font-size: 30px; }
 
 .c-about {
-  background-color: yellowgreen; }
+  background-color: #e7e2db;
+  text-align: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 0.5fr 1fr 3fr;
+  grid-column-gap: 40px; }
+  .c-about a {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    margin-left: 48.2%;
+    margin-top: 10px; }
+  .c-about i {
+    margin-top: 9px; }
+  .c-about .more {
+    background-color: #6b5c47;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    grid-column-start: 1;
+    grid-column-end: 3; }
+    .c-about .more:hover {
+      animation: shadow-pulse 1s infinite; }
+  .c-about h1 {
+    grid-column-start: 1;
+    grid-column-end: 3; }
+  .c-about p {
+    height: 230px;
+    margin-top: 35px;
+    margin-left: 40px;
+    text-align: left;
+    grid-column-start: 1;
+    grid-column-end: 2; }
+  .c-about .img-box {
+    width: 600px;
+    height: 300px;
+    border: 1px solid black;
+    grid-column-start: 2;
+    grid-column-end: 3; }
 
 .c-comments {
-  background-color: gray; }
+  display: grid;
+  grid-template-columns: 1fr 5fr 1fr 5fr 1fr;
+  grid-template-rows: 1fr 3fr;
+  background-color: #e7e2db; }
+  .c-comments h2 {
+    text-align: center;
+    margin: 40px 0px 0px;
+    grid-column-start: 1;
+    grid-column-end: 6; }
+  .c-comments .img-box {
+    border: 1px solid black;
+    width: 100px;
+    height: 100px;
+    margin-top: 20%;
+    margin-left: 10px; }
+  .c-comments .opinion {
+    text-align: left;
+    padding: 15px;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    margin: 30px 10px 50px;
+    background-color: #6b5c47;
+    color: #fbfaf9;
+    display: grid;
+    grid-template-columns: 150px 1fr; }
+    .c-comments .opinion-box .name {
+      margin-top: 8px;
+      margin-bottom: 15px; }
+    .c-comments .opinion .comm {
+      font-size: 16px;
+      grid-column-start: 2;
+      grid-column-end: 3; }
+  .c-comments #op1 {
+    grid-column-start: 2;
+    grid-column-end: 3; }
+  .c-comments #op2 {
+    grid-column-start: 4;
+    grid-column-end: 5; }
 
 .c-counter {
   background-color: darkmagenta; }
 
 .c-footer {
+  background-color: #e3cdae;
   background-image: url("../images/footer.jpg");
   text-align: center;
   padding: 20px; }
   .c-footer #a-div {
     transition-duration: 2s;
     box-sizing: border-box;
-    padding: 15px 0px;
+    padding: 12px 0px;
     width: 50%;
     height: 60px;
     margin: 0% 25%;
-    background-color: #2d3235; }
+    background-color: #2e281f; }
     .c-footer #a-div:hover {
-      background-color: #94989c; }
+      background-color: #e7e2db; }
       .c-footer #a-div:hover a {
-        color: #2d3235; }
+        color: #2e281f; }
     .c-footer #a-div a {
       transition-duration: 2s;
       margin: 18.5px 0px;
-      color: #94989c;
+      color: #e7e2db;
       height: 30px; }
   .c-footer h2 {
     padding: 20px 0px; }
   .c-footer #media {
+    margin-top: 10px;
     width: 350px; }
 
 .c-main {

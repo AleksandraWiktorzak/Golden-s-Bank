@@ -1,14 +1,15 @@
 // główne ważne importy
 @import '_reset';
 @import '_variables';
-@import url('https://fonts.googleapis.com/css?family=Poppins&display=swap&subset=latin-ext');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
 
 html{
     scroll-behavior: smooth;
 }
 .grid-container{
+    line-height: 1.15;
     display: grid;
-    grid-template-rows: 600px 8fr 3fr 5fr 212px;
+    grid-template-rows: 600px 9fr 2fr 5fr 212px;
     height: 2000px;
     font-family: $font;
     box-sizing: border-box;

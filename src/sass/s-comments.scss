@@ -1,3 +1,51 @@
 .c-comments{
-    background-color: gray;
+    display: grid;
+    grid-template-columns: 1fr 5fr 1fr 5fr 1fr;
+    grid-template-rows: 1fr 3fr;
+    background-color: $bg-color;
+    h2{
+        text-align: center;
+        margin: 40px 0px 0px;
+        grid-column-start: 1;
+        grid-column-end: 6;
+    }
+    .img-box{
+        border: 1px solid black;
+        width: 100px;
+        height: 100px;
+        margin-top: 20%;
+        margin-left: 10px;
+    }
+    .opinion{
+        @extend %shadow-box;
+        text-align: left;
+        padding: 15px;
+        grid-row-start: 2;
+        grid-row-end: 3;
+        margin:30px 10px 50px;
+        background-color: $light-brown;
+        color: $bisque;
+        display: grid;
+        grid-template-columns: 150px 1fr;
+        &-box{
+            .name{
+                margin-top:8px;
+                margin-bottom: 15px;
+            }
+        }
+        .comm{
+            font-size: $comment-unit;
+            grid-column-start: 2;
+            grid-column-end: 3;
+        }
+    }
+    #op1{
+        grid-column-start: 2;
+        grid-column-end: 3;
+        
+    }
+    #op2{
+        grid-column-start: 4;
+        grid-column-end: 5;
+    }
 }

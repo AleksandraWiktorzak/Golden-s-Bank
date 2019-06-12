@@ -1,11 +1,46 @@
 $color-1:black;
 $color-2:white;
 
-$font:'Poppins', sans-serif;
+$font: 'Open Sans', sans-serif;
+$comment-unit: 16px;
 $base-unit: 20px;
 $h1-unit:$base-unit*3.5;
 $h2-unit:$base-unit*2.5;
 $h3-unit:$base-unit*1.5;
 
-$light-blue:#94989c;
-$dark-blue:#2d3235;
+$bg-color: #e7e2db;
+$bisque:#fbfaf9;
+$light-brown:#6b5c47;
+$dark-brown:#2e281f;
+
+@keyframes shadow-pulse
+{
+     0% {
+          box-shadow: 0 0 0 0px rgba(0, 0, 0, 0.2);
+     }
+     100% {
+          box-shadow: 0 0 0 25px rgba(0, 0, 0, 0);
+     }
+}
+
+%arrow{
+        border: solid $dark-brown;
+        border-width: 0 6px 6px 0;
+        display: inline-block;
+        padding: 3px;
+        transform: rotate(45deg);
+        -webkit-transform: rotate(45deg);
+        width: 13px;
+        height: 13px;
+}
+%shadow-box{
+    -webkit-box-shadow: 5px 5px 4px 0px rgba(166,164,166,1);
+-moz-box-shadow: 5px 5px 4px 0px rgba(166,164,166,1);
+box-shadow: 5px 5px 4px 0px rgba(166,164,166,1);
+}
+%shadow-component{
+   
+    -webkit-box-shadow: 0px -3px 3px 0px rgba(166,164,166,1);
+-moz-box-shadow: 0px -3px 3px 0px rgba(166,164,166,1);
+box-shadow: 0px -3px 3px 0px rgba(166,164,166,1);
+}
