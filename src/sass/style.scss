@@ -1,0 +1,31 @@
+// główne ważne importy
+@import '_reset';
+@import '_variables';
+@import url('https://fonts.googleapis.com/css?family=Poppins&display=swap&subset=latin-ext');
+
+html{
+    scroll-behavior: smooth;
+}
+.grid-container{
+    display: grid;
+    grid-template-rows: 600px 8fr 3fr 5fr 212px;
+    height: 2000px;
+    font-family: $font;
+    box-sizing: border-box;
+    font-size: $base-unit;
+    h1{
+        font-size: $h1-unit
+    }
+    h2{
+        font-size: $h2-unit
+    }
+    h3{
+        font-size: $h3-unit
+    }
+}
+// scss'y komponentów
+@import 's-about';
+@import 's-comments';
+@import 's-counter';
+@import 's-footer';
+@import 's-main';

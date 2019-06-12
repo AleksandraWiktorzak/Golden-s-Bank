@@ -1,0 +1,104 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain) */
+@import url("https://fonts.googleapis.com/css?family=Poppins&display=swap&subset=latin-ext");
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+a {
+  text-decoration: none; }
+
+html {
+  scroll-behavior: smooth; }
+
+.grid-container {
+  display: grid;
+  grid-template-rows: 600px 8fr 3fr 5fr 212px;
+  height: 2000px;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+  font-size: 20px; }
+  .grid-container h1 {
+    font-size: 70px; }
+  .grid-container h2 {
+    font-size: 50px; }
+  .grid-container h3 {
+    font-size: 30px; }
+
+.c-about {
+  background-color: yellowgreen; }
+
+.c-comments {
+  background-color: gray; }
+
+.c-counter {
+  background-color: darkmagenta; }
+
+.c-footer {
+  background-image: url("../images/footer.jpg");
+  text-align: center;
+  padding: 20px; }
+  .c-footer #a-div {
+    transition-duration: 2s;
+    box-sizing: border-box;
+    padding: 15px 0px;
+    width: 50%;
+    height: 60px;
+    margin: 0% 25%;
+    background-color: #2d3235; }
+    .c-footer #a-div:hover {
+      background-color: #94989c; }
+      .c-footer #a-div:hover a {
+        color: #2d3235; }
+    .c-footer #a-div a {
+      transition-duration: 2s;
+      margin: 18.5px 0px;
+      color: #94989c;
+      height: 30px; }
+  .c-footer h2 {
+    padding: 20px 0px; }
+  .c-footer #media {
+    width: 350px; }
+
+.c-main {
+  background-color: blueviolet; }
