@@ -1,26 +1,27 @@
 .c-footer{
-    
+    @extend %shadow-component;
+    background-color: #e3cdae;
     background-image: url('../images/footer.jpg');
     text-align: center;
     padding: 20px;
     #a-div{
         transition-duration: 2s;
         &:hover{
-            background-color: $light-blue; 
+            background-color: $bg-color; 
             a{ 
-                color: $dark-blue;  
+                color:  $dark-brown;
             }
         }
         box-sizing: border-box;
-        padding:15px 0px;
+        padding:12px 0px;
         width: 50%;
         height: 60px;
         margin: 0% 25%;
-        background-color: $dark-blue;
+        background-color: $dark-brown;
         a{  
             transition-duration: 2s;
             margin: 18.5px 0px;
-            color: $light-blue;
+            color: $bg-color;
             height: 30px;
         }
     }
@@ -28,6 +29,7 @@
         padding: 20px 0px
     }
     #media{
+        margin-top: 10px;
         width: 350px;
     } 
 }
