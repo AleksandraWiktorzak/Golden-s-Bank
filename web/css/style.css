@@ -64,15 +64,109 @@ a {
   width: 13px;
   height: 13px; }
 
+.c-main .landing #form .nr1 .btn i {
+  border: solid #fbfaf9;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+  transform: rotate(315deg);
+  -webkit-transform: rotate(315deg);
+  width: 3px;
+  height: 3px; }
+
 .c-comments .opinion {
   -webkit-box-shadow: 5px 5px 4px 0px #a6a4a6;
   -moz-box-shadow: 5px 5px 4px 0px #a6a4a6;
   box-shadow: 5px 5px 4px 0px #a6a4a6; }
 
-.c-footer {
+.c-counter, .c-footer {
   -webkit-box-shadow: 0px -3px 3px 0px #a6a4a6;
   -moz-box-shadow: 0px -3px 3px 0px #a6a4a6;
   box-shadow: 0px -3px 3px 0px #a6a4a6; }
+
+.c-main .landing {
+  -webkit-box-shadow: 0px 0px 8px 6px rgba(166, 164, 166, 0.8);
+  -moz-box-shadow: 0px 0px 8px 6px rgba(166, 164, 166, 0.8);
+  box-shadow: 0px 0px 8px 6px rgba(166, 164, 166, 0.8); }
+
+.c-main .landing #form {
+  -webkit-box-shadow: 0px 0px 8px 6px rgba(58, 57, 57, 0.8);
+  -moz-box-shadow: 0px 0px 8px 6px rgba(58, 57, 57, 0.8);
+  box-shadow: 0px 0px 8px 6px rgba(58, 57, 57, 0.8); }
+
+.c-counter {
+  background: linear-gradient(-45deg, #bb9f80, #2e281f, #c7b9ab, #705f55);
+  background-size: 400% 400%;
+  -webkit-animation: Gradient 15s ease infinite;
+  -moz-animation: Gradient 15s ease infinite;
+  animation: Gradient 15s ease infinite; }
+
+@-webkit-keyframes Gradient {
+  0% {
+    background-position: 0% 50%; }
+  50% {
+    background-position: 100% 50%; }
+  100% {
+    background-position: 0% 50%; } }
+
+@-moz-keyframes Gradient {
+  0% {
+    background-position: 0% 50%; }
+  50% {
+    background-position: 100% 50%; }
+  100% {
+    background-position: 0% 50%; } }
+
+@keyframes Gradient {
+  0% {
+    background-position: 0% 50%; }
+  50% {
+    background-position: 100% 50%; }
+  100% {
+    background-position: 0% 50%; } }
+
+.c-main .landing #form .nr1 .option input {
+  display: none; }
+  .c-main .landing #form .nr1 .option input + label {
+    cursor: pointer;
+    line-height: 20px;
+    height: 20px;
+    padding-left: 20px;
+    display: block;
+    position: relative; }
+    .c-main .landing #form .nr1 .option input + label:not(:empty) {
+      padding-left: 28px; }
+    .c-main .landing #form .nr1 .option input + label:before, .c-main .landing #form .nr1 .option input + label:after {
+      content: '';
+      width: 20px;
+      height: 20px;
+      display: block;
+      border-radius: 50%;
+      left: 0;
+      top: 0;
+      position: absolute; }
+    .c-main .landing #form .nr1 .option input + label:before {
+      background: #504536;
+      transition: background 0.2s ease, transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 2); }
+    .c-main .landing #form .nr1 .option input + label:after {
+      background: #695b48;
+      transform: scale(0.78);
+      transition: transform 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.4); }
+  .c-main .landing #form .nr1 .option input:checked + label:before {
+    transform: scale(1.04);
+    background: #2e281f; }
+  .c-main .landing #form .nr1 .option input:checked + label:after {
+    transform: scale(0.4);
+    transition: transform .3s ease; }
+
+.c-main .landing #form .nr1 .option:hover input + label:before {
+  transform: scale(0.92); }
+
+.c-main .landing #form .nr1 .option:hover input + label:after {
+  transform: scale(0.74); }
+
+.c-main .landing #form .nr1 .option:hover input:checked + label:after {
+  transform: scale(0.4); }
 
 html {
   scroll-behavior: smooth; }
@@ -149,6 +243,7 @@ html {
     margin-top: 20%;
     margin-left: 10px; }
   .c-comments .opinion {
+    border-radius: 2px;
     text-align: left;
     padding: 15px;
     grid-row-start: 2;
@@ -172,9 +267,6 @@ html {
     grid-column-start: 4;
     grid-column-end: 5; }
 
-.c-counter {
-  background-color: darkmagenta; }
-
 .c-footer {
   background-color: #e3cdae;
   background-image: url("../images/footer.jpg");
@@ -182,6 +274,7 @@ html {
   padding: 20px; }
   .c-footer #a-div {
     transition-duration: 2s;
+    border-radius: 2px;
     box-sizing: border-box;
     padding: 12px 0px;
     width: 50%;
@@ -201,7 +294,71 @@ html {
     padding: 20px 0px; }
   .c-footer #media {
     margin-top: 10px;
-    width: 350px; }
+    width: 400px;
+    color: #e7e2db; }
 
 .c-main {
-  background-color: blueviolet; }
+  background-color: #e7e2db;
+  display: grid;
+  grid-template-columns: 1fr 550px 550px 1fr;
+  grid-template-rows: 1fr 525px; }
+  .c-main .logo {
+    display: grid;
+    grid-template-columns: 85px 1fr 1fr;
+    grid-column-start: 2;
+    grid-column-end: 4; }
+    .c-main .logo h3 {
+      margin-top: 35px;
+      height: 40px;
+      margin-left: 10px;
+      grid-column-start: 2;
+      grid-column-end: 4; }
+    .c-main .logo .img-box {
+      margin: 10px;
+      border: 1px solid black;
+      width: 64px;
+      height: 64px; }
+  .c-main .landing {
+    background-image: url("../images/main.jpg");
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    border-radius: 2px;
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr 1fr 4fr 1fr;
+    grid-template-rows: 1fr 10fr 1fr; }
+    .c-main .landing #form {
+      color: #fbfaf9;
+      display: grid;
+      grid-template-columns: 1fr;
+      border-radius: 2px;
+      background-color: #2e281f;
+      grid-column-start: 5;
+      grid-column-end: 6;
+      grid-row-start: 2;
+      grid-row-end: 3; }
+      .c-main .landing #form .nr1 {
+        display: grid;
+        grid-template-columns: 20px 1fr 20px;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+        background-color: #6b5c47; }
+        .c-main .landing #form .nr1 h3 {
+          margin-top: 10px;
+          text-align: center;
+          grid-column-start: 1;
+          grid-column-end: 4; }
+        .c-main .landing #form .nr1 .option {
+          grid-column-start: 2;
+          grid-column-end: 3; }
+          .c-main .landing #form .nr1 .option label {
+            font-size: 24px; }
+        .c-main .landing #form .nr1 .btn {
+          margin-bottom: 20px;
+          text-align: center;
+          grid-column-start: 2;
+          grid-column-end: 3;
+          background-color: #2e281f; }
+          .c-main .landing #form .nr1 .btn div {
+            margin-top: 13px; }
+          .c-main .landing #form .nr1 .btn i {
+            margin-left: 10px; }

@@ -18,6 +18,7 @@
     }
     .opinion{
         @extend %shadow-box;
+        border-radius: $radius;
         text-align: left;
         padding: 15px;
         grid-row-start: 2;

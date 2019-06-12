@@ -1,17 +1,17 @@
-$color-1:black;
-$color-2:white;
-
 $font: 'Open Sans', sans-serif;
 $comment-unit: 16px;
 $base-unit: 20px;
 $h1-unit:$base-unit*3.5;
 $h2-unit:$base-unit*2.5;
 $h3-unit:$base-unit*1.5;
+$form-unit: $base-unit*1.2;
 
 $bg-color: #e7e2db;
 $bisque:#fbfaf9;
 $light-brown:#6b5c47;
 $dark-brown:#2e281f;
+
+$radius:2px;
 
 @keyframes shadow-pulse
 {
@@ -33,6 +33,17 @@ $dark-brown:#2e281f;
         width: 13px;
         height: 13px;
 }
+%arrow-button{
+        border: solid $bisque;
+        border-width: 0 3px 3px 0;
+        display: inline-block;
+        padding: 3px;
+        transform: rotate(315deg);
+        -webkit-transform: rotate(315deg);
+        width: 3px;
+        height: 3px;
+}
+
 %shadow-box{
     -webkit-box-shadow: 5px 5px 4px 0px rgba(166,164,166,1);
 -moz-box-shadow: 5px 5px 4px 0px rgba(166,164,166,1);
@@ -43,4 +54,123 @@ box-shadow: 5px 5px 4px 0px rgba(166,164,166,1);
     -webkit-box-shadow: 0px -3px 3px 0px rgba(166,164,166,1);
 -moz-box-shadow: 0px -3px 3px 0px rgba(166,164,166,1);
 box-shadow: 0px -3px 3px 0px rgba(166,164,166,1);
+}
+%shadow-landing{
+    -webkit-box-shadow: 0px 0px 8px 6px rgba(166,164,166,0.8);
+-moz-box-shadow: 0px 0px 8px 6px rgba(166,164,166,0.8);
+box-shadow: 0px 0px 8px 6px rgba(166,164,166,0.8);
+}
+%shadow-form{
+    -webkit-box-shadow: 0px 0px 8px 6px rgba(58, 57, 57, 0.8);
+-moz-box-shadow: 0px 0px 8px 6px rgba(58, 57, 57, 0.8);
+box-shadow: 0px 0px 8px 6px rgba(58, 57, 57, 0.8);
+}
+
+%gradient{
+    background: linear-gradient(-45deg, #bb9f80, #2e281f,#c7b9ab, #705f55);
+	background-size: 400% 400%;
+	-webkit-animation: Gradient 15s ease infinite;
+	-moz-animation: Gradient 15s ease infinite;
+    animation: Gradient 15s ease infinite;
+    @-webkit-keyframes Gradient {
+        0% {
+            background-position: 0% 50%
+        }
+        50% {
+            background-position: 100% 50%
+        }
+        100% {
+            background-position: 0% 50%
+        }
+    }
+    @-moz-keyframes Gradient {
+        0% {
+            background-position: 0% 50%
+        }
+        50% {
+            background-position: 100% 50%
+        }
+        100% {
+            background-position: 0% 50%
+        }
+    }
+    @keyframes Gradient {
+        0% {
+            background-position: 0% 50%
+        }
+        50% {
+            background-position: 100% 50%
+        }
+        100% {
+            background-position: 0% 50%
+        }
+    }
+}
+%radio{
+
+$radioSize: $base-unit;
+$radioActive:#2e281f;
+$radioBorder:#504536;
+
+    input {
+        display: none;
+        & + label {
+            cursor: pointer;
+            line-height: $radioSize;
+            height: $radioSize;
+            padding-left: $radioSize;
+            display: block;
+            position: relative;
+            &:not(:empty) {
+                padding-left: $radioSize + 8;
+            }
+            &:before,
+            &:after {
+                content: '';
+                width: $radioSize;
+                height: $radioSize;
+                display: block;
+                border-radius: 50%;
+                left: 0;
+                top: 0;
+                position: absolute;
+            }
+            &:before {
+                background: $radioBorder;
+                transition: background .2s ease, transform .4s cubic-bezier(.175, .885, .32, 2);
+            }
+            &:after {
+                background: #695b48;
+                transform: scale(.78);
+                transition: transform .6s cubic-bezier(.175, .885, .32, 1.4);
+            }
+        }
+        &:checked + label {
+            &:before {
+                transform: scale(1.04);
+                background: $radioActive;
+            }
+            &:after {
+                transform: scale(.4);
+                transition: transform .3s ease;
+            }
+        }
+    }
+    &:hover {
+        input {
+            & + label {
+                &:before {
+                    transform: scale(.92);
+                }
+                &:after {
+                    transform: scale(.74);
+                }
+            }
+            &:checked + label {
+                &:after {
+                    transform: scale(.4);
+                }
+            }
+        }
+    }
 }

@@ -1,3 +1,86 @@
 .c-main{
-    background-color: blueviolet;
+    background-color: $bg-color;
+    display: grid;
+    grid-template-columns: 1fr 550px 550px 1fr;
+    grid-template-rows: 1fr 525px;
+    .logo{
+        display: grid;
+        grid-template-columns:85px 1fr 1fr;
+
+        grid-column-start: 2;
+        grid-column-end: 4;
+        h3{
+            margin-top: 35px;
+            height: 40px;
+            margin-left:10px;
+            grid-column-start: 2;
+            grid-column-end: 4;  
+        }
+        .img-box{
+            margin: 10px;
+            border: 1px solid black;
+            width: 64px;
+            height: 64px;
+        }
+    }
+    .landing{
+        background-image: url('../images/main.jpg');
+        grid-column-start: 2;
+        grid-column-end: 4;
+        grid-row-start: 2;
+        border-radius: $radius;
+        @extend %shadow-landing;
+
+        display:grid;
+        grid-template-columns: 1fr 4fr 1fr 1fr 4fr 1fr;
+        grid-template-rows: 1fr 10fr 1fr;
+
+        #form{
+            color:$bisque;
+            display: grid;
+            grid-template-columns: 1fr;
+            @extend %shadow-form;
+            border-radius: $radius;
+            background-color: $dark-brown;
+            grid-column-start: 5;
+            grid-column-end: 6;
+            grid-row-start: 2;
+            grid-row-end:3;
+            .nr1{
+                display: grid;
+                grid-template-columns: 20px 1fr 20px;
+            grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+
+                background-color: $light-brown;
+                h3{
+                    margin-top: 10px;
+                    text-align: center;
+                    grid-column-start: 1;
+                    grid-column-end: 4;
+                }
+                .option{
+                    grid-column-start: 2;
+                    grid-column-end: 3;
+                    @extend %radio;
+                    label{
+                        font-size: $form-unit;
+                    }
+                }
+            .btn{
+                margin-bottom: 20px;
+                text-align: center;
+                grid-column-start: 2;
+                    grid-column-end: 3;
+                background-color: $dark-brown;
+                div{
+                    margin-top: 13px;
+                }
+                i{
+                    margin-left:10px;
+                    @extend %arrow-button;
+                }
+            }
+            }
+        }
+    }
 }
