@@ -64,7 +64,7 @@ a {
   width: 13px;
   height: 13px; }
 
-.c-main .landing #form .nr1 .btn i {
+.c-main .landing #form .nr1 .btn i, .c-main .landing #form .nr2 .btn i {
   border: solid #fbfaf9;
   border-width: 0 3px 3px 0;
   display: inline-block;
@@ -167,6 +167,29 @@ a {
 
 .c-main .landing #form .nr1 .option:hover input:checked + label:after {
   transform: scale(0.4); }
+
+.c-main .landing #form .nr1, .c-main .landing #form .nr2 {
+  display: grid;
+  grid-template-columns: 20px 1fr 20px;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+  background-color: #6b5c47; }
+
+.c-main .landing #form .nr1 .btn, .c-main .landing #form .nr2 .btn {
+  margin-bottom: 20px;
+  text-align: center;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 6;
+  grid-row-end: 7;
+  background-color: #2e281f; }
+  .c-main .landing #form .nr1 .btn div, .c-main .landing #form .nr2 .btn div {
+    margin-top: 13px; }
+  .c-main .landing #form .nr1 .btn i, .c-main .landing #form .nr2 .btn i {
+    margin-left: 10px; }
+
+.c-main .landing #form .nr1 h3, .c-main .landing #form .nr2 h3 {
+  margin-top: 10px;
+  text-align: center; }
 
 html {
   scroll-behavior: smooth; }
@@ -337,28 +360,21 @@ html {
       grid-column-end: 6;
       grid-row-start: 2;
       grid-row-end: 3; }
-      .c-main .landing #form .nr1 {
-        display: grid;
-        grid-template-columns: 20px 1fr 20px;
-        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
-        background-color: #6b5c47; }
-        .c-main .landing #form .nr1 h3 {
-          margin-top: 10px;
-          text-align: center;
-          grid-column-start: 1;
-          grid-column-end: 4; }
-        .c-main .landing #form .nr1 .option {
-          grid-column-start: 2;
-          grid-column-end: 3; }
-          .c-main .landing #form .nr1 .option label {
-            font-size: 24px; }
-        .c-main .landing #form .nr1 .btn {
-          margin-bottom: 20px;
-          text-align: center;
-          grid-column-start: 2;
-          grid-column-end: 3;
-          background-color: #2e281f; }
-          .c-main .landing #form .nr1 .btn div {
-            margin-top: 13px; }
-          .c-main .landing #form .nr1 .btn i {
-            margin-left: 10px; }
+      .c-main .landing #form .nr1 h3 {
+        grid-column-start: 1;
+        grid-column-end: 4; }
+      .c-main .landing #form .nr1 .option {
+        grid-column-start: 2;
+        grid-column-end: 3; }
+        .c-main .landing #form .nr1 .option label {
+          font-size: 24px; }
+      .c-main .landing #form .nr2 #one {
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 2; }
+      .c-main .landing #form .nr2 #two {
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 3;
+        grid-row-end: 4; }

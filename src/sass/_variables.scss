@@ -174,3 +174,29 @@ $radioBorder:#504536;
         }
     }
 }
+%grid-form{
+    display: grid;
+                grid-template-columns: 20px 1fr 20px;
+            grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+            background-color: $light-brown;
+}
+%button-form{
+                margin-bottom: 20px;
+                text-align: center;
+                grid-column-start: 2;
+                grid-column-end: 3;
+                grid-row-start: 6;
+                grid-row-end: 7;
+                background-color: $dark-brown;
+                div{
+                    margin-top: 13px;
+                }
+                i{
+                    margin-left:10px;
+                    @extend %arrow-button;
+                }
+}
+%h3-form{
+    margin-top: 10px;
+                    text-align: center;
+}

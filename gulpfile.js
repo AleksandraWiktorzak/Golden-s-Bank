@@ -5,6 +5,10 @@ var juck = require('gulp-nunjucks-render');
 var wait = require('gulp-wait');
 var min = require('gulp-imagemin');
 
+gulp.task('js', function () {
+  gulp.src('./src/js/**/*')
+    .pipe(gulp.dest('./web/js'))
+});
 gulp.task('img', function () {
     gulp.src('./src/images/**/*')
       .pipe(min())
@@ -40,5 +44,5 @@ gulp.task('sass', function() {
     .pipe(gulp.dest('./web/css'))
     .pipe(browserSync.stream());
 });
-gulp.task('build', ['serve', 'reload', 'sass','juck', 'img']);
+gulp.task('build', ['serve', 'reload', 'sass','juck', 'img', 'js']);
 gulp.task('default',['build'])
