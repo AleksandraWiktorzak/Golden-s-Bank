@@ -48,11 +48,22 @@ table {
 a {
   text-decoration: none; }
 
+input {
+  outline: none; }
+
 @keyframes shadow-pulse {
   0% {
     box-shadow: 0 0 0 0px rgba(0, 0, 0, 0.2); }
   100% {
     box-shadow: 0 0 0 25px rgba(0, 0, 0, 0); } }
+
+@keyframes border {
+  0% {
+    border-color: red; }
+  50% {
+    border-color: blue; }
+  100% {
+    border-color: red; } }
 
 .c-about i {
   border: solid #2e281f;
@@ -64,7 +75,7 @@ a {
   width: 13px;
   height: 13px; }
 
-.c-main .landing #form .nr1 .btn i, .c-main .landing #form .nr2 .btn i {
+.c-main .landing #form .nr1 .btn i, .c-main .landing #form .nr2 .btn i, .c-main .landing #form .nr3 .btn i, .c-main .landing #form .nr4 .btn i {
   border: solid #fbfaf9;
   border-width: 0 3px 3px 0;
   display: inline-block;
@@ -168,13 +179,15 @@ a {
 .c-main .landing #form .nr1 .option:hover input:checked + label:after {
   transform: scale(0.4); }
 
-.c-main .landing #form .nr1, .c-main .landing #form .nr2 {
+.c-main .landing #form .nr1, .c-main .landing #form .nr2, .c-main .landing #form .nr3, .c-main .landing #form .nr4 {
   display: grid;
   grid-template-columns: 20px 1fr 20px;
   grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
-  background-color: #6b5c47; }
+  background-color: #6b5c47;
+  border-radius: 2px; }
 
-.c-main .landing #form .nr1 .btn, .c-main .landing #form .nr2 .btn {
+.c-main .landing #form .nr1 .btn, .c-main .landing #form .nr2 .btn, .c-main .landing #form .nr3 .btn, .c-main .landing #form .nr4 .btn {
+  border-radius: 2px;
   margin-bottom: 20px;
   text-align: center;
   grid-column-start: 2;
@@ -182,14 +195,35 @@ a {
   grid-row-start: 6;
   grid-row-end: 7;
   background-color: #2e281f; }
-  .c-main .landing #form .nr1 .btn div, .c-main .landing #form .nr2 .btn div {
+  .c-main .landing #form .nr1 .btn div, .c-main .landing #form .nr2 .btn div, .c-main .landing #form .nr3 .btn div, .c-main .landing #form .nr4 .btn div {
     margin-top: 13px; }
-  .c-main .landing #form .nr1 .btn i, .c-main .landing #form .nr2 .btn i {
+  .c-main .landing #form .nr1 .btn i, .c-main .landing #form .nr2 .btn i, .c-main .landing #form .nr3 .btn i, .c-main .landing #form .nr4 .btn i {
     margin-left: 10px; }
 
-.c-main .landing #form .nr1 h3, .c-main .landing #form .nr2 h3 {
+.c-main .landing #form .nr1 h3, .c-main .landing #form .nr2 h3, .c-main .landing #form .nr3 h3, .c-main .landing #form .nr4 h3 {
   margin-top: 10px;
-  text-align: center; }
+  text-align: center;
+  grid-column-start: 1;
+  grid-column-end: 4; }
+
+.c-main .landing #form .nr3 select, .c-main .landing #form .nr4 input {
+  text-align: center;
+  cursor: pointer;
+  background-color: #504536;
+  border: 1px solid #fbfaf9;
+  border-radius: 2px;
+  font-size: 24px;
+  color: #fbfaf9;
+  margin: 14px 0px; }
+
+.c-main .landing #form .nr4 ::-webkit-input-placeholder {
+  color: #ffffffd7; }
+
+.c-main .landing #form .nr4 :-ms-input-placeholder {
+  color: #ffffffd7; }
+
+.c-main .landing #form .nr4 ::placeholder {
+  color: #ffffffd7; }
 
 html {
   scroll-behavior: smooth; }
@@ -360,9 +394,6 @@ html {
       grid-column-end: 6;
       grid-row-start: 2;
       grid-row-end: 3; }
-      .c-main .landing #form .nr1 h3 {
-        grid-column-start: 1;
-        grid-column-end: 4; }
       .c-main .landing #form .nr1 .option {
         grid-column-start: 2;
         grid-column-end: 3; }
@@ -378,3 +409,30 @@ html {
         grid-column-end: 3;
         grid-row-start: 3;
         grid-row-end: 4; }
+      .c-main .landing #form .nr3 select {
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 2;
+        grid-row-end: 3; }
+      .c-main .landing #form .nr4 input {
+        grid-column-start: 2;
+        grid-column-end: 3;
+        margin: 14px 0px;
+        font-size: 24px; }
+        .c-main .landing #form .nr4 input:focus {
+          -webkit-animation: border 2s infinite;
+          /* Safari 4+ */
+          -moz-animation: border 2s infinite;
+          /* Fx 5+ */
+          -o-animation: border 2s infinite;
+          /* Opera 12+ */
+          animation: border 2s infinite; }
+        .c-main .landing #form .nr4 input #name {
+          grid-row-start: 2;
+          grid-row-end: 3; }
+        .c-main .landing #form .nr4 input #telephone {
+          grid-row-start: 3;
+          grid-row-end: 4; }
+        .c-main .landing #form .nr4 input #email {
+          grid-row-start: 4;
+          grid-row-end: 5; }

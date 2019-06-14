@@ -10,6 +10,7 @@ $bg-color: #e7e2db;
 $bisque:#fbfaf9;
 $light-brown:#6b5c47;
 $dark-brown:#2e281f;
+$placeholder:#ffffffd7;
 
 $radius:2px;
 
@@ -22,6 +23,17 @@ $radius:2px;
           box-shadow: 0 0 0 25px rgba(0, 0, 0, 0);
      }
 }
+@keyframes border{
+    0%{
+        border-color: red;
+    }
+    50%{
+        border-color: blue;
+    }
+    100%{
+        border-color: red;
+    }
+    }
 
 %arrow{
         border: solid $dark-brown;
@@ -106,12 +118,11 @@ box-shadow: 0px 0px 8px 6px rgba(58, 57, 57, 0.8);
         }
     }
 }
-%radio{
-
 $radioSize: $base-unit;
 $radioActive:#2e281f;
 $radioBorder:#504536;
 
+%radio{
     input {
         display: none;
         & + label {
@@ -179,8 +190,10 @@ $radioBorder:#504536;
                 grid-template-columns: 20px 1fr 20px;
             grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
             background-color: $light-brown;
+            border-radius: $radius;
 }
 %button-form{
+                border-radius: $radius;
                 margin-bottom: 20px;
                 text-align: center;
                 grid-column-start: 2;
@@ -199,4 +212,30 @@ $radioBorder:#504536;
 %h3-form{
     margin-top: 10px;
                     text-align: center;
+                    grid-column-start: 1;
+                    grid-column-end: 4;
+}
+%form-styles{
+    
+                        text-align: center;
+                        cursor: pointer;
+                        background-color: $radioBorder;
+                        border: 1px solid $bisque;
+                        border-radius: $radius;
+                        font-size: $form-unit;
+                        color: $bisque;
+                        margin:14px 0px;
+}
+%placeholder{
+    ::-webkit-input-placeholder {
+        color:$placeholder;
+        
+      }
+      :-ms-input-placeholder {
+        color:$placeholder;
+        
+      }
+      ::placeholder {
+        color:$placeholder;
+       }
 }

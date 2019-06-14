@@ -50,8 +50,7 @@
                 @extend %grid-form;
                 h3{
                     @extend %h3-form;
-                    grid-column-start: 1;
-                    grid-column-end: 4;
+                    
                 }
                 .option{
                     grid-column-start: 2;
@@ -63,7 +62,7 @@
                 }
             .btn{
                 @extend %button-form
-            };
+            }
             }
             .nr2{
                 @extend %grid-form;
@@ -86,5 +85,64 @@
                     @extend %button-form;
                 }
             }
+            .nr3{
+                    @extend %grid-form;
+                    h3{
+                        @extend %h3-form;
+                    }
+                    select{
+                        @extend %form-styles;
+                        grid-column-start: 2;
+                        grid-column-end: 3;
+                        grid-row-start: 2;
+                        grid-row-end:3;
+                    }
+                    .btn{
+                        @extend %button-form;
+                    }
+                    }
+                    .nr4{
+                        @extend %grid-form;
+                        @extend %placeholder;
+                        h3{
+                            @extend %h3-form;
+                        }
+                        .btn{
+                            @extend %button-form;
+                        }
+                        
+                        input{
+                            &:focus{
+                                // // border-color: red;
+                                // animation-name: border;
+                                // animation-duration: 2s in;
+                                -webkit-animation: border 2s infinite; /* Safari 4+ */
+  -moz-animation:    border 2s infinite; /* Fx 5+ */
+  -o-animation:      border 2s infinite; /* Opera 12+ */
+  animation:         border 2s infinite;
+                               
+                            }
+                            @extend %form-styles;
+                            grid-column-start: 2;
+                            grid-column-end: 3;
+                            margin:14px 0px;
+                            font-size: $form-unit;
+                            #name{
+                                
+                                grid-row-start: 2;
+                                grid-row-end:3;
+                            }
+                            #telephone{
+                                grid-row-start: 3;
+                                grid-row-end:4;
+                            }
+                            #email{
+                                grid-row-start: 4;
+                                grid-row-end:5;
+                            }
+                        }
+                    }
+                }
+            }
         }
-    }}
+                    
