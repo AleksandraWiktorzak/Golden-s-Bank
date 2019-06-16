@@ -78,6 +78,24 @@
           grid-column-end: 3;
           grid-row-start: 3;
           grid-row-end: 4;
+          margin-top: 40px;
+        }
+        .slide-container {
+          margin: 0px 10px;
+          position: relative;
+          grid-column-start: 2;
+          grid-column-end: 3;
+          grid-row-start: 4;
+          grid-row-end: 6;
+          .rangeP {
+            @extend %range-style;
+            margin-top: 27%;
+          }
+          .period {
+            @extend %slider-value;
+            margin-top: 10%;
+            margin-left:100px;
+          }
         }
         .btn {
           @extend %button-form;
@@ -108,9 +126,6 @@
 
           .age {
             @extend %slider-value;
-            &::before {
-              content: attr(data-val) " ";
-            }
           }
         }
         .btn {

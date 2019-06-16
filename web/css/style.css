@@ -246,7 +246,7 @@ input {
 .c-main .landing #form .nr4 ::placeholder {
   color: #ffffffd7; }
 
-.c-main .landing #form .nr3 .slide-container .age {
+.c-main .landing #form .nr2 .slide-container .period, .c-main .landing #form .nr3 .slide-container .age {
   -webkit-box-shadow: 0px 0px 5px 2px #87765c;
   -moz-box-shadow: 0px 0px 5px 2px #87765c;
   box-shadow: 0px 0px 5px 2px #87765c;
@@ -263,8 +263,10 @@ input {
   line-height: 30px;
   font-size: 20px;
   pointer-events: none; }
+  .c-main .landing #form .nr2 .slide-container .period::before, .c-main .landing #form .nr3 .slide-container .age::before {
+    content: attr(data-val) " "; }
 
-.c-main .landing #form .nr3 .slide-container .range {
+.c-main .landing #form .nr2 .slide-container .rangeP, .c-main .landing #form .nr3 .slide-container .range {
   margin-top: 20%;
   appearance: none;
   -webkit-appearance: none;
@@ -274,11 +276,11 @@ input {
   height: 10px;
   border-radius: 50px;
   outline: none; }
-  .c-main .landing #form .nr3 .slide-container .range:active::-webkit-slider-thumb {
+  .c-main .landing #form .nr2 .slide-container .rangeP:active::-webkit-slider-thumb, .c-main .landing #form .nr3 .slide-container .range:active::-webkit-slider-thumb {
     -webkit-box-shadow: 0px 0px 5px 2px #87765c;
     -moz-box-shadow: 0px 0px 5px 2px #87765c;
     box-shadow: 0px 0px 5px 2px #87765c; }
-  .c-main .landing #form .nr3 .slide-container .range::-webkit-slider-thumb {
+  .c-main .landing #form .nr2 .slide-container .rangeP::-webkit-slider-thumb, .c-main .landing #form .nr3 .slide-container .range::-webkit-slider-thumb {
     appearance: none;
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -471,7 +473,20 @@ html {
         grid-column-start: 2;
         grid-column-end: 3;
         grid-row-start: 3;
-        grid-row-end: 4; }
+        grid-row-end: 4;
+        margin-top: 40px; }
+      .c-main .landing #form .nr2 .slide-container {
+        margin: 0px 10px;
+        position: relative;
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 4;
+        grid-row-end: 6; }
+        .c-main .landing #form .nr2 .slide-container .rangeP {
+          margin-top: 27%; }
+        .c-main .landing #form .nr2 .slide-container .period {
+          margin-top: 10%;
+          margin-left: 100px; }
       .c-main .landing #form .nr3 select {
         grid-column-start: 2;
         grid-column-end: 3;
@@ -484,8 +499,6 @@ html {
         grid-column-end: 3;
         grid-row-start: 4;
         grid-row-end: 6; }
-        .c-main .landing #form .nr3 .slide-container .age::before {
-          content: attr(data-val) " "; }
       .c-main .landing #form .nr4 input {
         grid-column-start: 2;
         grid-column-end: 3;

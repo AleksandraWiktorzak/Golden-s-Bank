@@ -311,6 +311,9 @@ $radius: 2px;
   line-height: 30px;
   font-size: $base-unit;
   pointer-events: none;
+  &::before {
+    content: attr(data-val) " ";
+  }
 }
 %range-style {
   margin-top: 20%;
@@ -329,7 +332,7 @@ $radius: 2px;
     box-shadow: 0px 0px 5px 2px rgba(135, 118, 92, 1);
   }
 
-  &.range::-webkit-slider-thumb {
+  &::-webkit-slider-thumb {
     appearance: none;
     -webkit-appearance: none;
     -moz-appearance: none;
