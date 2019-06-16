@@ -1,148 +1,169 @@
-.c-main{
-    background-color: $bg-color;
+.c-main {
+  background-color: $bg-color;
+  display: grid;
+  grid-template-columns: 1fr 550px 550px 1fr;
+  grid-template-rows: 1fr 525px;
+  .logo {
     display: grid;
-    grid-template-columns: 1fr 550px 550px 1fr;
-    grid-template-rows: 1fr 525px;
-    .logo{
-        display: grid;
-        grid-template-columns:85px 1fr 1fr;
+    grid-template-columns: 85px 1fr 1fr;
 
-        grid-column-start: 2;
-        grid-column-end: 4;
-        h3{
-            margin-top: 35px;
-            height: 40px;
-            margin-left:10px;
-            grid-column-start: 2;
-            grid-column-end: 4;  
-        }
-        .img-box{
-            margin: 10px;
-            border: 1px solid black;
-            width: 64px;
-            height: 64px;
-        }
+    grid-column-start: 2;
+    grid-column-end: 4;
+    h3 {
+      margin-top: 30px;
+      height: 40px;
+      margin-left: 10px;
+      grid-column-start: 2;
+      grid-column-end: 4;
     }
-    .landing{
-        background-image: url('../images/main.jpg');
-        grid-column-start: 2;
-        grid-column-end: 4;
-        grid-row-start: 2;
-        border-radius: $radius;
-        @extend %shadow-landing;
+    .img-box {
+      margin: 10px;
+      width: 64px;
+      height: 64px;
+    }
+  }
+  .landing {
+    background-image: url("../images/main.jpg");
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    border-radius: $radius;
+    @extend %shadow-landing;
 
-        display:grid;
-        grid-template-columns: 1fr 4fr 1fr 1fr 4fr 1fr;
-        grid-template-rows: 1fr 10fr 1fr;
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr 1fr 4fr 1fr;
+    grid-template-rows: 1fr 10fr 1fr;
 
-        #form{
-            color:$bisque;
-            display: grid;
-            grid-template-columns: 1fr;
-            @extend %shadow-form;
-            border-radius: $radius;
-            background-color: $dark-brown;
-            grid-column-start: 5;
-            grid-column-end: 6;
-            grid-row-start: 2;
-            grid-row-end:3;
-            .nr1{
-                @extend %grid-form;
-                h3{
-                    @extend %h3-form;
-                    
-                }
-                .option{
-                    grid-column-start: 2;
-                    grid-column-end: 3;
-                    @extend %radio;
-                    label{
-                        font-size: $form-unit;
-                    }
-                }
-            .btn{
-                @extend %button-form
-            }
-            }
-            .nr2{
-                @extend %grid-form;
-                h3{
-                    @extend %h3-form;
-                }
-                    #one{
-                        grid-column-start: 2;
-                        grid-column-end: 3;
-                        grid-row-start: 1;
-                        grid-row-end: 2;
-                    }
-                    #two{
-                        grid-column-start: 2;
-                        grid-column-end: 3;
-                        grid-row-start:3;
-                        grid-row-end: 4;
-                    }              
-                .btn{
-                    @extend %button-form;
-                }
-            }
-            .nr3{
-                    @extend %grid-form;
-                    h3{
-                        @extend %h3-form;
-                    }
-                    select{
-                        @extend %form-styles;
-                        grid-column-start: 2;
-                        grid-column-end: 3;
-                        grid-row-start: 2;
-                        grid-row-end:3;
-                    }
-                    .btn{
-                        @extend %button-form;
-                    }
-                    }
-                    .nr4{
-                        @extend %grid-form;
-                        @extend %placeholder;
-                        h3{
-                            @extend %h3-form;
-                        }
-                        .btn{
-                            @extend %button-form;
-                        }
-                        
-                        input{
-                            &:focus{
-                                // // border-color: red;
-                                // animation-name: border;
-                                // animation-duration: 2s in;
-                                -webkit-animation: border 2s infinite; /* Safari 4+ */
-  -moz-animation:    border 2s infinite; /* Fx 5+ */
-  -o-animation:      border 2s infinite; /* Opera 12+ */
-  animation:         border 2s infinite;
-                               
-                            }
-                            @extend %form-styles;
-                            grid-column-start: 2;
-                            grid-column-end: 3;
-                            margin:14px 0px;
-                            font-size: $form-unit;
-                            #name{
-                                
-                                grid-row-start: 2;
-                                grid-row-end:3;
-                            }
-                            #telephone{
-                                grid-row-start: 3;
-                                grid-row-end:4;
-                            }
-                            #email{
-                                grid-row-start: 4;
-                                grid-row-end:5;
-                            }
-                        }
-                    }
-                }
-            }
+    #form {
+      color: $bisque;
+      display: grid;
+      grid-template-columns: 1fr;
+      @extend %shadow-form;
+      border-radius: $radius;
+      background-color: $dark-brown;
+      grid-column-start: 5;
+      grid-column-end: 6;
+      grid-row-start: 2;
+      grid-row-end: 3;
+      .nr1 {
+        @extend %grid-form;
+        h3 {
+          @extend %h3-form;
         }
-                    
+        .option {
+          grid-column-start: 2;
+          grid-column-end: 3;
+          @extend %radio;
+          label {
+            font-size: $form-unit;
+          }
+        }
+        .btn {
+          @extend %button-form;
+        }
+      }
+      .nr2 {
+        @extend %grid-form;
+        h3 {
+          @extend %h3-form;
+        }
+        #one {
+          grid-column-start: 2;
+          grid-column-end: 3;
+          grid-row-start: 1;
+          grid-row-end: 2;
+        }
+        #two {
+          grid-column-start: 2;
+          grid-column-end: 3;
+          grid-row-start: 3;
+          grid-row-end: 4;
+        }
+        .btn {
+          @extend %button-form;
+        }
+      }
+      .nr3 {
+        @extend %grid-form;
+        h3 {
+          @extend %h3-form;
+        }
+        select {
+          @extend %form-styles;
+          grid-column-start: 2;
+          grid-column-end: 3;
+          grid-row-start: 2;
+          grid-row-end: 3;
+        }
+        .slide-container {
+          margin: 0px 10px;
+          position: relative;
+          grid-column-start: 2;
+          grid-column-end: 3;
+          grid-row-start: 4;
+          grid-row-end: 6;
+          .range {
+            @extend %range-style;
+          }
+
+          .age {
+            @extend %slider-value;
+            &::before {
+              content: attr(data-val) " ";
+            }
+          }
+        }
+        .btn {
+          @extend %button-form;
+        }
+      }
+      .nr4 {
+        @extend %grid-form;
+        @extend %placeholder;
+        h3 {
+          @extend %h3-form;
+        }
+        .btn {
+          @extend %button-form;
+        }
+
+        input {
+          &:focus {
+            // // border-color: red;
+            // animation-name: border;
+            // animation-duration: 2s in;
+            -webkit-animation: border 2s infinite; /* Safari 4+ */
+            -moz-animation: border 2s infinite; /* Fx 5+ */
+            -o-animation: border 2s infinite; /* Opera 12+ */
+            animation: border 2s infinite;
+          }
+          @extend %form-styles;
+          grid-column-start: 2;
+          grid-column-end: 3;
+          margin: 14px 0px;
+          font-size: $form-unit;
+          #name {
+            grid-row-start: 2;
+            grid-row-end: 3;
+          }
+          #telephone {
+            grid-row-start: 3;
+            grid-row-end: 4;
+          }
+          #email {
+            grid-row-start: 4;
+            grid-row-end: 5;
+          }
+        }
+        p {
+          margin: 5px 18px;
+          font-size: $base-unit * 0.6;
+          grid-column-start: 2;
+          grid-column-end: 3;
+          grid-row-start: 5;
+          grid-row-end: 6;
+        }
+      }
+    }
+  }
+}

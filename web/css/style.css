@@ -59,11 +59,32 @@ input {
 
 @keyframes border {
   0% {
-    border-color: red; }
+    border-radius: 2px;
+    border-color: #fbfaf9; }
+  20% {
+    border-color: #fbfaf9c5;
+    border-radius: 2px; }
+  40% {
+    border-color: #fbfaf969;
+    border-radius: 2px; }
   50% {
-    border-color: blue; }
+    border-color: #fbfaf93a;
+    border-radius: 2px; }
+  60% {
+    border-radius: 2px;
+    border-color: #fbfaf927; }
+  70% {
+    border-color: #fbfaf963;
+    border-radius: 2px; }
+  80% {
+    border-color: #fbfaf9a8;
+    border-radius: 2px; }
+  90% {
+    border-color: #fbfaf9de;
+    border-radius: 2px; }
   100% {
-    border-color: red; } }
+    border-color: #fbfaf9c5;
+    border-radius: 2px; } }
 
 .c-about i {
   border: solid #2e281f;
@@ -148,7 +169,7 @@ input {
     .c-main .landing #form .nr1 .option input + label:not(:empty) {
       padding-left: 28px; }
     .c-main .landing #form .nr1 .option input + label:before, .c-main .landing #form .nr1 .option input + label:after {
-      content: '';
+      content: "";
       width: 20px;
       height: 20px;
       display: block;
@@ -168,7 +189,7 @@ input {
     background: #2e281f; }
   .c-main .landing #form .nr1 .option input:checked + label:after {
     transform: scale(0.4);
-    transition: transform .3s ease; }
+    transition: transform 0.3s ease; }
 
 .c-main .landing #form .nr1 .option:hover input + label:before {
   transform: scale(0.92); }
@@ -225,6 +246,51 @@ input {
 .c-main .landing #form .nr4 ::placeholder {
   color: #ffffffd7; }
 
+.c-main .landing #form .nr3 .slide-container .age {
+  -webkit-box-shadow: 0px 0px 5px 2px #87765c;
+  -moz-box-shadow: 0px 0px 5px 2px #87765c;
+  box-shadow: 0px 0px 5px 2px #87765c;
+  border: 1px solid #fbfaf9;
+  border-radius: 60px;
+  position: absolute;
+  left: 0px;
+  top: 0;
+  margin-top: 10px;
+  width: 100px;
+  height: 30px;
+  text-align: center;
+  color: #fbfaf9;
+  line-height: 30px;
+  font-size: 20px;
+  pointer-events: none; }
+
+.c-main .landing #form .nr3 .slide-container .range {
+  margin-top: 20%;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-color: #504536;
+  width: 100%;
+  height: 10px;
+  border-radius: 50px;
+  outline: none; }
+  .c-main .landing #form .nr3 .slide-container .range:active::-webkit-slider-thumb {
+    -webkit-box-shadow: 0px 0px 5px 2px #87765c;
+    -moz-box-shadow: 0px 0px 5px 2px #87765c;
+    box-shadow: 0px 0px 5px 2px #87765c; }
+  .c-main .landing #form .nr3 .slide-container .range::-webkit-slider-thumb {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    height: 30px;
+    width: 30px;
+    background: #2e281f;
+    border-radius: 30px;
+    cursor: grab;
+    -webkit-box-shadow: 0px 0px 5px 2px #40382c;
+    -moz-box-shadow: 0px 0px 5px 2px #40382c;
+    box-shadow: 0px 0px 5px 2px #40382c; }
+
 html {
   scroll-behavior: smooth; }
 
@@ -279,7 +345,6 @@ html {
   .c-about .img-box {
     width: 600px;
     height: 300px;
-    border: 1px solid black;
     grid-column-start: 2;
     grid-column-end: 3; }
 
@@ -294,10 +359,9 @@ html {
     grid-column-start: 1;
     grid-column-end: 6; }
   .c-comments .img-box {
-    border: 1px solid black;
     width: 100px;
     height: 100px;
-    margin-top: 20%;
+    margin-top: 25%;
     margin-left: 10px; }
   .c-comments .opinion {
     border-radius: 2px;
@@ -350,9 +414,9 @@ html {
   .c-footer h2 {
     padding: 20px 0px; }
   .c-footer #media {
-    margin-top: 10px;
-    width: 400px;
-    color: #e7e2db; }
+    width: 100%;
+    color: #e7e2db;
+    text-align: left; }
 
 .c-main {
   background-color: #e7e2db;
@@ -365,14 +429,13 @@ html {
     grid-column-start: 2;
     grid-column-end: 4; }
     .c-main .logo h3 {
-      margin-top: 35px;
+      margin-top: 30px;
       height: 40px;
       margin-left: 10px;
       grid-column-start: 2;
       grid-column-end: 4; }
     .c-main .logo .img-box {
       margin: 10px;
-      border: 1px solid black;
       width: 64px;
       height: 64px; }
   .c-main .landing {
@@ -414,6 +477,15 @@ html {
         grid-column-end: 3;
         grid-row-start: 2;
         grid-row-end: 3; }
+      .c-main .landing #form .nr3 .slide-container {
+        margin: 0px 10px;
+        position: relative;
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 4;
+        grid-row-end: 6; }
+        .c-main .landing #form .nr3 .slide-container .age::before {
+          content: attr(data-val) " "; }
       .c-main .landing #form .nr4 input {
         grid-column-start: 2;
         grid-column-end: 3;
@@ -436,3 +508,10 @@ html {
         .c-main .landing #form .nr4 input #email {
           grid-row-start: 4;
           grid-row-end: 5; }
+      .c-main .landing #form .nr4 p {
+        margin: 5px 18px;
+        font-size: 12px;
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 5;
+        grid-row-end: 6; }

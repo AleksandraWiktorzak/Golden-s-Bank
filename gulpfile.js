@@ -30,7 +30,8 @@ gulp.task('reload', function(){
 gulp.task('serve', function () {
     browserSync.init({
         server: './web'
-    });  
+    }); 
+    gulp.watch('./src/js/main.js', ['js']); 
     gulp.watch('./src/templates/index.html', ['reload']);
     gulp.watch('./src/sass/*.scss',['sass']);
     gulp.watch('./src/templates/components/*.html',['juck']);

@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="./css/style.css">
-    <link rel="icon" type="image/png" href="/src/images/crown.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="./images/crown.png" sizes="32x32">
     <title>Golden's Bank</title>
 </head>
 
@@ -14,7 +14,7 @@
     <div class="grid-container">
         <div class="c-main">
     <div class="logo">
-        <div id='golden-logo' class="img-box"><img src="/src/images/golden.png"/></div>
+        <div id='golden-logo' class="img-box"><img width="64px" height="64px" src="./images/golden.png"/></div>
         <h3>Zwyciężamy po królewsku.</h3>
     </div>
     <div class="landing">
@@ -56,7 +56,7 @@
     </div>
     <div class='btn'><div>Dalej<i></i></div></div>
 </form> -->
-            <!-- <form class='nr3'>
+            <form class='nr3'>
     <h3>Wybierz płeć</h3>
         <select class="gender" name="gender">
             <option selected value='kobieta'>Kobieta</option>
@@ -64,16 +64,21 @@
             <option  value="wolę nie podawać">Wolę nie podawać</option>
         </select>
         <h3>Podaj swój wiek</h3>
+          <div class="slide-container">
+            <input type="range" name="" class="range" min=20 max=75 step=1 value=47>
+            <span class="age">lat</span>
+          </div>
     <div class='btn'><div>Dalej<i></i></div></div>
-</form> -->
-            <form class='nr4'>
+</form>
+            <!-- <form class='nr4'>
         <h3>Zróbmy to razem!</h3>
-        <input type="text" id='name' pattern="[A-Za-z]{3}" required placeholder="Imię">
-        <input type="tel" id="telephone" required placeholder="Numer tel">
-        <input type="email" id="email" required placeholder="Email">
+        <input type="text" id='name' autocomplete='no' pattern="[A-Za-z]{3}" required placeholder="Imię">
+        <input type="tel" id="telephone" autocomplete='no' required placeholder="Numer tel">
+        <input type="email" id="email" autocomplete='no' required placeholder="Email">
+        <p>*Chcę być informowany przez firmę Golden's Bank o dostępnych ofertach specjalnych i akcjach promocyjnych.</p>
             
         <div class='btn'><div>Dalej<i></i></div></div>
-    </form>
+    </form> -->
         </div>
     </div>   
 </div>
@@ -85,23 +90,23 @@
             Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
     </p>
     <div class="img-box">
-        <img src="/" alt="zdjęcie szczytu biurowca"/>
+        <img src="./images/dach.jpg" alt="zdjęcie szczytu biurowca"/>
     </div>
 </div>
         <div class='c-counter'><p>licznik</p></div>
         <div class='c-comments'>
     <h2>FIRMA GODNA ZAUFANIA</h2>
     <div id='op1' class='opinion'>
-        <div class="img-box"><img src="/" alt='zdjęcie' /></div>
+        <div class="img-box"><img src="./images/m.jpg" width='100px' height='100px' alt='zdjęcie' /></div>
         <div class='opinion-box'>
-            <p class='name'>Aneta, 28 lat</p>
+            <p class='name'>Rafał, 48 lat</p>
             <p class='comm'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
                 labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
                 ut aliquip ex ea commodo consequat. </p>
         </div>
     </div>
     <div id='op2' class='opinion'>
-        <div class="img-box"><img src="/src/images/facebook.png" alt='zdjęcie' /></div>
+        <div class="img-box"><img src="./images/w.jpg" width='100px' height='100px' alt='zdjęcie' /></div>
         <div class='opinion-box'>
             <p class='name'>Magda, 25 lat</p>
             <p class='comm'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
@@ -117,12 +122,14 @@
    </div>
    <div id='media'>
       <a target='_blank' href="https://en.wikipedia.org/wiki/Facebook">
-      <img src="/" alt="ikona facebooka"/></a>
+      <img src="./images/facebook.png" alt="ikona facebooka"/></a>
       <a target="_blank" href="https://pl.wikipedia.org/wiki/LinkedIn">
-         <img src="/" alt="ikona linkedin"/></a>
+         <img src="./images/linkedin.png" alt="ikona linkedin"/></a>
          <a target="_blank" href="https://pl.wikipedia.org/wiki/Og%C3%B3lne_rozporz%C4%85dzenie_o_ochronie_danych">RODO</a>
    </div>
 </div>
     </div>
+    <script src="//code.jquery.com/jquery-3.1.0.js"></script>
+    <script src="./js/main.js"></script>
 </body>
 </html>
