@@ -47,6 +47,7 @@
       grid-row-end: 3;
       .nr1 {
         @extend %grid-form;
+        display: grid;
         h3 {
           @extend %h3-form;
         }
@@ -64,6 +65,7 @@
       }
       .nr2 {
         @extend %grid-form;
+        display: none;
         h3 {
           @extend %h3-form;
         }
@@ -79,6 +81,22 @@
           grid-row-start: 3;
           grid-row-end: 4;
           margin-top: 40px;
+        }
+        .slide-container0{
+          margin: 0px 10px;
+          position: relative;
+          grid-column-start: 2;
+          grid-column-end: 3;
+          grid-row-start: 2;
+          grid-row-end: 3; 
+          .rangeA {
+            @extend %range-style;
+          
+          }
+          .amount {
+            @extend %slider-value;
+            margin-left:102px;
+          }
         }
         .slide-container {
           margin: 0px 10px;
@@ -103,6 +121,7 @@
       }
       .nr3 {
         @extend %grid-form;
+        display: none;
         h3 {
           @extend %h3-form;
         }
@@ -135,6 +154,7 @@
       .nr4 {
         @extend %grid-form;
         @extend %placeholder;
+        display: none;
         h3 {
           @extend %h3-form;
         }
@@ -177,6 +197,18 @@
           grid-column-end: 3;
           grid-row-start: 5;
           grid-row-end: 6;
+        }
+      }
+      .form-end{
+        @extend %grid-form;
+        display: none;
+        #thanks{
+          text-align: center;
+          grid-row-start: 3;
+          grid-row-end: 5;
+          grid-column-start: 2;
+          grid-column-end: 3;
+
         }
       }
     }

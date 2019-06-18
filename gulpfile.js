@@ -30,7 +30,7 @@ gulp.task('reload', function(){
 gulp.task('serve', function () {
     browserSync.init({
         server: './web'
-    }); 
+    });
     gulp.watch('./src/js/main.js', ['js']); 
     gulp.watch('./src/templates/index.html', ['reload']);
     gulp.watch('./src/sass/*.scss',['sass']);
@@ -45,5 +45,5 @@ gulp.task('sass', function() {
     .pipe(gulp.dest('./web/css'))
     .pipe(browserSync.stream());
 });
-gulp.task('build', ['serve', 'reload', 'sass','juck', 'img', 'js']);
+gulp.task('build', ['serve', 'reload', 'sass','juck', 'img','js']);
 gulp.task('default',['build'])

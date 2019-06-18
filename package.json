@@ -4,6 +4,7 @@
   "description": "",
   "main": "gulpfile.js",
   "dependencies": {
+    "countup.js": "^2.0.4",
     "expand-tilde": "^2.0.2",
     "fancy-log": "^1.3.3",
     "glob-watcher": "^0.0.6",

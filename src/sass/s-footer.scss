@@ -33,5 +33,10 @@
         width: 100%;
         color:$bg-color;
         text-align: left;
+        img{
+            &:hover{
+                opacity: 0.7;
+            }
+        }
     } 
 }
