@@ -1,4 +1,4 @@
-1. Pobierz repozytorium i otwórz je w dowolnym edytorze programistycznych kodów źródłowych np: Visual Studio Code.
+1. Pobierz repozytorium, wypakuj z niego folder 'LandingPageIG-master' i otwórz go w dowolnym edytorze programistycznych kodów źródłowych np: Visual Studio Code.
 
 2.Upewnij się, że masz zainstalowany node.js. Jeśli nie - możesz go pobrać z tej strony: https://nodejs.org/en/, 
 a następnie zainstalować na swoim komputerze.
