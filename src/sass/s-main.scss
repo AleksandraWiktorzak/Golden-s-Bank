@@ -168,12 +168,9 @@
 
         input {
           &:focus {
-            // // border-color: red;
-            // animation-name: border;
-            // animation-duration: 2s in;
-            -webkit-animation: border 2s infinite; /* Safari 4+ */
-            -moz-animation: border 2s infinite; /* Fx 5+ */
-            -o-animation: border 2s infinite; /* Opera 12+ */
+            -webkit-animation: border 2s infinite;
+            -moz-animation: border 2s infinite; 
+            -o-animation: border 2s infinite; 
             animation: border 2s infinite;
           }
           @extend %form-styles;
@@ -217,7 +214,6 @@
       }
     }
   }
-  
 }
 @media screen and (max-width:360px){
    .c-main {

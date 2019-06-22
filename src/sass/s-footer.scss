@@ -75,4 +75,17 @@
              
         }
     }
+    @media screen and (max-width:1167px){
+        max-width: 100vw;
+        #a-div{
+            display: none;
+        }
+        #a-div2{
+            display: block;
+            height: 90px;
+            width: 60%;
+            margin: 0% 20%;
+             
+        }
+    }
 }
