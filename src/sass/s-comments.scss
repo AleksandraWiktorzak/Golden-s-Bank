@@ -49,3 +49,53 @@
         grid-column-end: 5;
     }
 }
+@media screen and (max-width:360px){
+    .c-comments{
+        max-height: 1000px;
+        max-width: 100vw;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1.5fr 3fr 3fr;
+    h2{
+        margin: 25% 0% 5% 0%;
+        text-align: center;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+    .opinion{
+        display: grid;
+        grid-template-columns:1fr;
+        grid-template-rows:1fr 6fr;
+        max-height: 300px;
+        margin: 3% 2%;
+        .img-box{
+            margin-top: 3%;
+            margin-left: 36%;
+            grid-column-start: 1;
+            grid-column-end: 2;
+            grid-row-start: 1;
+            grid-row-end: 2;
+        }
+        .opinion-box{
+            grid-row-start: 2;
+            grid-row-end: 3;
+            text-align: center;
+        }
+    }
+
+#op1{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    
+}
+#op2{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 3;
+    grid-row-end: 4;
+}
+}
+}

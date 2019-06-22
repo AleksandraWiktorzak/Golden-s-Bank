@@ -361,8 +361,8 @@ html {
   scroll-behavior: smooth; }
 
 .grid-container {
+  max-width: 100vw;
   line-height: 1.15;
-  display: grid;
   grid-template-rows: 600px 9fr 2fr 5fr 212px;
   font-family: "Open Sans", sans-serif;
   box-sizing: border-box;
@@ -375,7 +375,7 @@ html {
     font-size: 30px; }
   @media screen and (max-width: 360px) {
     .grid-container {
-      width: 100vw; } }
+      grid-template-rows: 1280px 4fr 1.3fr 4.5fr 212px; } }
 
 .c-about {
   background-color: #e7e2db;
@@ -383,7 +383,8 @@ html {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 0.5fr 1fr 3fr;
-  grid-column-gap: 40px; }
+  grid-column-gap: 40px;
+  padding-bottom: 50px; }
   .c-about a {
     grid-column-start: 1;
     grid-column-end: 3;
@@ -415,6 +416,42 @@ html {
     height: 300px;
     grid-column-start: 2;
     grid-column-end: 3; }
+
+@media screen and (max-width: 360px) {
+  .c-about {
+    max-height: 200vh;
+    display: grid;
+    max-width: 100vw;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.1fr 0.5fr 0.6fr 2.8fr;
+    padding-bottom: 0px; }
+    .c-about a {
+      display: none; }
+    .c-about h1 {
+      text-align: center;
+      grid-column-start: 1;
+      grid-column-end: 2;
+      grid-row-start: 2;
+      grid-row-end: 3; }
+    .c-about p {
+      margin: 40px 5px 0px 5px;
+      text-align: center;
+      grid-column-start: 1;
+      grid-column-end: 2;
+      text-align: center;
+      grid-row-start: 4;
+      height: 460px; }
+    .c-about .img-box {
+      margin-top: 4%;
+      max-width: 360px;
+      max-height: 180px;
+      grid-column-start: 1;
+      grid-column-end: 2;
+      grid-row-start: 3;
+      grid-row-end: 4;
+      background-image: url("/images/dach-m.jpg"); }
+      .c-about .img-box img {
+        display: none; } }
 
 .c-comments {
   display: grid;
@@ -456,7 +493,49 @@ html {
     grid-column-start: 4;
     grid-column-end: 5; }
 
+@media screen and (max-width: 360px) {
+  .c-comments {
+    max-height: 1000px;
+    max-width: 100vw;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1.5fr 3fr 3fr; }
+    .c-comments h2 {
+      margin: 25% 0% 5% 0%;
+      text-align: center;
+      grid-column-start: 1;
+      grid-column-end: 2;
+      grid-row-start: 1;
+      grid-row-end: 2; }
+    .c-comments .opinion {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 6fr;
+      max-height: 300px;
+      margin: 3% 2%; }
+      .c-comments .opinion .img-box {
+        margin-top: 3%;
+        margin-left: 36%;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 2; }
+      .c-comments .opinion .opinion-box {
+        grid-row-start: 2;
+        grid-row-end: 3;
+        text-align: center; }
+    .c-comments #op1 {
+      grid-column-start: 1;
+      grid-column-end: 2;
+      grid-row-start: 2;
+      grid-row-end: 3; }
+    .c-comments #op2 {
+      grid-column-start: 1;
+      grid-column-end: 2;
+      grid-row-start: 3;
+      grid-row-end: 4; } }
+
 .c-counter {
+  max-width: 100vw;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 6fr 1fr; }
@@ -467,12 +546,17 @@ html {
     color: #fbfaf9; }
   @media screen and (max-width: 360px) {
     .c-counter {
+      max-height: 300px;
       grid-template-columns: 1fr 1fr;
-      grid-template-rows: 1fr 6fr 6fr 1fr; }
+      grid-template-rows: 0.3fr 1fr 1fr; }
       .c-counter .count-column {
-        grid-row-start: 2; }
+        grid-row-start: 2;
+        font-size: 18px; }
+        .c-counter .count-column img {
+          width: 32px;
+          height: 32px; }
         .c-counter .count-column + .c3 {
-          grid-row-start: 3;
+          grid-row-start: 4;
           grid-column-start: 1;
           grid-column-end: 3; } }
 
@@ -499,6 +583,25 @@ html {
       margin: 18.5px 0px;
       color: #e7e2db;
       height: 30px; }
+  .c-footer #a-div2 {
+    display: none;
+    transition-duration: 2s;
+    border-radius: 2px;
+    box-sizing: border-box;
+    padding: 12px 0px;
+    width: 50%;
+    height: 60px;
+    margin: 0% 25%;
+    background-color: #2e281f; }
+    .c-footer #a-div2:hover {
+      background-color: #e7e2db; }
+      .c-footer #a-div2:hover a {
+        color: #2e281f; }
+    .c-footer #a-div2 a {
+      transition-duration: 2s;
+      margin: 18.5px 0px;
+      color: #e7e2db;
+      height: 30px; }
   .c-footer h2 {
     padding: 20px 0px; }
   .c-footer #media {
@@ -507,6 +610,16 @@ html {
     text-align: left; }
     .c-footer #media img:hover {
       opacity: 0.7; }
+  @media screen and (max-width: 360px) {
+    .c-footer {
+      max-width: 100vw; }
+      .c-footer #a-div {
+        display: none; }
+      .c-footer #a-div2 {
+        display: block;
+        height: 90px;
+        width: 60%;
+        margin: 0% 20%; } }
 
 .c-main {
   background-color: #e7e2db;
@@ -538,6 +651,8 @@ html {
     display: grid;
     grid-template-columns: 1fr 4fr 1fr 1fr 4fr 1fr;
     grid-template-rows: 1fr 10fr 1fr; }
+    .c-main .landing .img-m {
+      display: none; }
     .c-main .landing #form {
       color: #fbfaf9;
       display: grid;
@@ -642,3 +757,52 @@ html {
           grid-row-end: 5;
           grid-column-start: 2;
           grid-column-end: 3; }
+
+@media screen and (max-width: 360px) {
+  .c-main {
+    max-height: 1280px;
+    max-width: 100vw;
+    grid-template-rows: 1fr 5.25fr;
+    grid-template-columns: 1fr; }
+    .c-main .logo {
+      max-height: 100vh;
+      grid-column-start: 1;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 2fr; }
+      .c-main .logo .img-box {
+        margin-top: 25%;
+        margin-left: 15.25%;
+        background-image: url("/images/golden-m.png");
+        background-repeat: no-repeat;
+        width: 250px;
+        height: 237px;
+        grid-row-start: 1; }
+        .c-main .logo .img-box img {
+          display: none; }
+      .c-main .logo h3 {
+        text-align: center;
+        grid-column-start: 1;
+        grid-row-start: 2; }
+    .c-main .landing {
+      max-height: 100vh;
+      grid-column-start: 1;
+      grid-row-start: 2;
+      background-image: none;
+      background-color: #e7e2db;
+      grid-template-columns: 1fr;
+      grid-template-rows: 202px 10fr 0.5fr; }
+      .c-main .landing #img-m {
+        display: inline;
+        grid-row-start: 1;
+        grid-row-end: 2;
+        background-image: url("/images/main-m.jpg"); }
+      .c-main .landing #form {
+        margin-left: 2.77%;
+        max-width: 340px;
+        max-height: 430px;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 2;
+        grid-row-end: 3; }
+        .c-main .landing #form .nr2 {
+          max-height: 417px; } }

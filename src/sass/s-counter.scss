@@ -1,4 +1,5 @@
 .c-counter{
+    max-width: 100vw;
     @extend %gradient;
     @extend %shadow-component;
     display: grid;
@@ -12,14 +13,22 @@
     
     }
     @media screen and (max-width:360px){
+        max-height: 300px;
         
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 6fr 6fr 1fr;
+        grid-template-rows: 0.3fr 1fr 1fr;
         .count-column{
             grid-row-start: 2;
+            font-size: $base-unit*0.9;
+            
+            
+            img{
+                width: 32px;
+                height: 32px;
+            }
             
         & +.c3{
-            grid-row-start: 3;
+            grid-row-start: 4;
             grid-column-start: 1;
             grid-column-end: 3;
         
