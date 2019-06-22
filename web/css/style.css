@@ -364,7 +364,6 @@ html {
   line-height: 1.15;
   display: grid;
   grid-template-rows: 600px 9fr 2fr 5fr 212px;
-  height: 2000px;
   font-family: "Open Sans", sans-serif;
   box-sizing: border-box;
   font-size: 20px; }
@@ -374,6 +373,9 @@ html {
     font-size: 50px; }
   .grid-container h3 {
     font-size: 30px; }
+  @media screen and (max-width: 360px) {
+    .grid-container {
+      width: 100vw; } }
 
 .c-about {
   background-color: #e7e2db;
@@ -463,6 +465,16 @@ html {
     grid-row-end: 3;
     text-align: center;
     color: #fbfaf9; }
+  @media screen and (max-width: 360px) {
+    .c-counter {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 6fr 6fr 1fr; }
+      .c-counter .count-column {
+        grid-row-start: 2; }
+        .c-counter .count-column + .c3 {
+          grid-row-start: 3;
+          grid-column-start: 1;
+          grid-column-end: 3; } }
 
 .c-footer {
   background-color: #e3cdae;
@@ -499,7 +511,7 @@ html {
 .c-main {
   background-color: #e7e2db;
   display: grid;
-  grid-template-columns: 1fr 550px 550px 1fr;
+  grid-template-columns: 1fr 4.4fr 4.4fr 1fr;
   grid-template-rows: 1fr 525px; }
   .c-main .logo {
     display: grid;
@@ -518,6 +530,7 @@ html {
       height: 64px; }
   .c-main .landing {
     background-image: url("../images/main.jpg");
+    max-width: 1100px;
     grid-column-start: 2;
     grid-column-end: 4;
     grid-row-start: 2;

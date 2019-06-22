@@ -11,6 +11,21 @@
         color:$bisque;
     
     }
+    @media screen and (max-width:360px){
+        
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 6fr 6fr 1fr;
+        .count-column{
+            grid-row-start: 2;
+            
+        & +.c3{
+            grid-row-start: 3;
+            grid-column-start: 1;
+            grid-column-end: 3;
+        
+        }
+        }    
+        }
 }
 
 
